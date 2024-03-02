@@ -1,2 +1,2 @@
-# GalateaPartners.gihub.io
+# GalateaPartners.github.io
 Website of Galatea Partners
