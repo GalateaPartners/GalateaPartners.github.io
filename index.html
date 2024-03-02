@@ -1,14 +1,97 @@
-
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Galatea Partners</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <title>Galatea Partners</title>
+    <link rel="shortcut icon" href="img/icon/icon.jpg" type="image/jpg">
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://galateapartners.github.io "/>
+    <meta property="og:title" content="Galatea Partners" />
+    <meta property="og:description" content="Galatea Partners" />
+    <meta property="og:image" content="img/icon/icon.jpg" />
+
+    <script>
+    // smoothscroll
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+        speedAsDuration: true
+    });
+    </script>
 </head>
 
 <body>
-    <h1>
-        Hello World!
-    </h1>
+	<canvas id="canvas"></canvas>
+	<section id="body">
+
+    <!-- menu bar-->
+    <ul class="menu" data-scroll-header>
+         <li>
+            <a href="#">
+                HOME
+            </a>
+        </li>
+        <li> 
+            <a data-scroll href="#about">
+                ABOUT
+            </a>
+        </li>
+        <li>
+            <a href="#works">
+                WORKS
+            </a>
+        </li>
+        <li>
+            <a href="#contact">
+                CONTACT
+            </a>
+        </li>
+    </ul>
+
+    <!--main cntents-->
+
+    <!-- top-->
+    <center>
+    <div class="CompanyName">
+        Galatea Partners
+    </div>
+			<div class="welcome">
+        Welcome to our website.
+    </div>
+     <!-- about-->
+    <p id="about">
+        <h1 class="title">
+            ABOUT
+        </h1>
+        <div class="main">
+            <p>Galatea Partnersは、パートナーロボットの開発で人々を幸せにする会社です</p>
+        </div>
+    </p>
+
+     <!-- works-->
+    <p id="works">
+        <h1 class="title">
+            WORKS
+        </h1>
+        <div class="main">
+            <p>準備中……</p>
+        </div>
+    </p>
+
+     <!-- contact-->
+    <p id="contact">
+        <h1 class="title">
+           CONTACT
+        </h1>
+        <div class="main">
+            <p>Twitter account:
+            <a href="https://twitter.com/" target="_blank"><img src="img/icon/twitter.svg" class="logo"></a></p>
+            <p>mail address: example@example.com</p>
+        </div>
+    </p>
+    </center>
+
+    </section>
 </body>
 </html>
