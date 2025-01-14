@@ -46,7 +46,7 @@
 }
 /* class */
 .CompanyName {
-    color: #F0F0F0;
+    color: #303030;
     font-size: 12vw;
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 3s;
@@ -60,7 +60,7 @@
 
 .welcome {
 	
-    color: #F0F0F0 ;
+    color: #303030;
     font-size: 6vw;
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 2s;
@@ -75,8 +75,8 @@
 }
 
 .title {
-    color: #F0F0F0;
-    font-size: 10vw;
+    color: #303030;
+    font-size: 4vw;
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 0.9s;
     animation-name: titleIn;
@@ -89,6 +89,19 @@
 	position:relative;
 }
 
+/* タイトルの下線用の新しいスタイルを追加 */
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -2vw;  /* タイトルからの距離 */
+    left: 0;
+    width: 100vw;  /* ビューポートの幅いっぱい */
+    height: 1px;   /* 線の太さ */
+    background-color: #303030;  /* 線の色 */
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.9s;  /* タイトルのアニメーションと同じ時間 */
+    opacity: 0;
+}
 
 .main {
 	padding-bottom:calc(20vh - 0.5em);
@@ -97,7 +110,7 @@
  	font-size: 2.5vw;
  	font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     opacity:0;
-    color: #F0F0F0;
+    color: #303030;
     animation-duration: 1s;
     animation-name: main;
     animation-fill-mode: forwards;
@@ -144,7 +157,6 @@
     left:0;
     right:0;
     margin: 0 auto;
-	background: linear-gradient(rgba(50,50,50,1), rgba(50,50,50,0.0));
     display: flex;
 	justify-content: center;
 }
@@ -158,8 +170,7 @@
 .menu li a{
     padding: 2vw 4vw;
     text-decoration: none;
-
-    color:#F0F0F0;
+    color:#303030;
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
 	font-weight : 200;
     font-size:1.5vw;
@@ -186,13 +197,13 @@
 	margin-bottom: 5vw;
 	position:relative;
 	overflow: hidden;
-	background-color:#303030;
+	background-color:#f0f0f0;
 }
 
 .works h1 {
 	font-size: 5vw;
 	font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-	color: #101010;
+	color: #303030;
 	font-weight :100;
 	top: 0;
   	left: 0;
@@ -203,7 +214,7 @@
 .works p{
 	font-size: 2vw;
 	font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-	color: #101010;
+	color: #303030;
 	font-weight :200;
 	top: calc(5vw + 3em);
   	left: 0;
@@ -226,8 +237,6 @@
 	transition: .4s;
 	filter: contrast(20%) brightness(170%);
 	text-decoration: none;
-	
-
 }
 
 html {
@@ -244,24 +253,75 @@ html {
 	left: 0;
 }
 
-canvas {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:#303030;
-    background-image: url(../img/background/background.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-
+/* フッターのスタイル */
+.footer {
+    background-color: #f5f5f5;
+    padding: 4vw 0 2vw 0;
+    margin-top: 8vw;
+    width: 100%;
 }
 
-.bg_image::before {
-  content: "";
-  position: absolute;
-  top: 0;  bottom: 0;
-  left: 0;  right: 0;
-  background: black;
-  opacity:0.4;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 2vw;
+}
+
+.footer-section h3 {
+    color: #303030;
+    font-size: 1.8vw;
+    font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
+    font-weight: 200;
+    margin-bottom: 1.5vw;
+}
+
+.footer-section p {
+    color: #505050;
+    font-size: 1.2vw;
+    font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
+    font-weight: 200;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8vw;
+}
+
+.footer-section ul li a {
+    color: #505050;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
+    font-weight: 200;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3vw;
+    padding-top: 2vw;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-bottom p {
+    color: #707070;
+    font-size: 1vw;
+    font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
+    font-weight: 200;
 }
