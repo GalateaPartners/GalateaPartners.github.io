@@ -47,67 +47,88 @@
 /* class */
 .CompanyName {
     color: #303030;
-    font-size: 12vw;
+    font-size: min(12vw, 120px);
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 3s;
     animation-name: fadeIn;
     animation-fill-mode: forwards;
-    padding-top: calc(40vh - 0.5em);
-	font-weight :200;
-	opacity:0;
-	animation-delay:0.5s;
+    padding-top: min(40vh, 300px);
+    font-weight: 200;
+    opacity: 0;
+    animation-delay: 0.5s;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90vw;
 }
 
 .welcome {
-	
     color: #303030;
-    font-size: 6vw;
+    font-size: min(6vw, 60px);
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 2s;
     animation-name: main;
     animation-fill-mode: forwards;
     line-height: 0.5em;
-	font-weight :100;
-	opacity:0;
-	animation-delay:2.5s;
-	padding-top:calc(20vh - 0.5em);
-	padding-bottom:calc(40vh - 0.5em);
+    font-weight: 100;
+    opacity: 0;
+    animation-delay: 2.5s;
+    padding-top: min(20vh, 150px);
+    padding-bottom: min(40vh, 300px);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90vw;
 }
 
 .title {
     color: #303030;
-    font-size: 4vw;
+    font-size: min(4vw, 40px);
     font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     animation-duration: 0.9s;
     animation-name: titleIn;
     animation-timing-function: ease; 
     animation-fill-mode: forwards;
-    line-height: 0.3em;
+    line-height: 1.5;
     padding-top: calc(10vh-0.5em);
 	padding-bottom: 0;
 	font-weight :200;
 	position:relative;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 60vw;
 }
 
-/* タイトルの下線用の新しいスタイルを追加 */
+/* タイトルの下線用のスタイル修正 */
 .title::after {
     content: '';
     position: absolute;
-    bottom: -2vw;  /* タイトルからの距離 */
-    left: 0;
-    width: 100vw;  /* ビューポートの幅いっぱい */
-    height: 1px;   /* 線の太さ */
-    background-color: #303030;  /* 線の色 */
+    bottom: -1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    max-width: 800px;
+    height: 1px;
+    background-color: #303030;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 0.9s;  /* タイトルのアニメーションと同じ時間 */
+    animation-delay: 0.9s;
     opacity: 0;
+    z-index: -1;  /* 下線を背面に配置 */
 }
 
+/* メインコンテンツの余白調整 */
 .main {
-	padding-bottom:calc(20vh - 0.5em);
+    padding-bottom: calc(20vh - 0.5em);
+    margin-top: 2vw;  /* タイトルの下線との間隔を確保 */
+    position: relative;  /* 重なり順の制御のため */
+    z-index: 1;  /* コンテンツを前面に */
+    width: 60vw;  /* タイトルと同じ幅 */
+    max-width: 800px;  /* タイトルと同じ最大幅 */
+    margin-left: auto;
+    margin-right: auto;
 }
 .main p{
- 	font-size: 2.5vw;
+ 	font-size: min(2.5vw, 24px);
  	font-family:'Hiragino Sans','游ゴシック Light',sans-serif;
     opacity:0;
     color: #303030;
@@ -115,6 +136,10 @@
     animation-name: main;
     animation-fill-mode: forwards;
 	font-weight :200;
+    line-height: 1.6;
+    width: 100%;  /* 親要素の幅いっぱいに */
+    max-width: 800px;
+    margin: 0 auto;
 }
 .main p:nth-child(1){
 	animation-delay:0.2s;
@@ -168,12 +193,12 @@
 }
 
 .menu li a{
-    padding: 2vw 4vw;
+    padding: min(2vw, 20px) min(4vw, 40px);
     text-decoration: none;
     color:#303030;
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
 	font-weight : 200;
-    font-size:1.5vw;
+    font-size:min(1.5vw, 18px);
     transition: .4s;
 }
 
@@ -191,35 +216,34 @@
 }
 
 .works {
-	width: 70vw;
-	height: 40vw;
-	transition: .6s;
-	margin-bottom: 5vw;
-	position:relative;
-	overflow: hidden;
-	background-color:#f0f0f0;
+    width: min(70vw, 1000px);
+    height: auto;
+    transition: .6s;
+    margin: 0 auto 5vw auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    padding: 3vw;
+    border-radius: 8px;
 }
 
 .works h1 {
-	font-size: 5vw;
-	font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-	color: #303030;
-	font-weight :100;
-	top: 0;
-  	left: 0;
-	margin-bottom: 0.3em;
-	position:absolute;
+    font-size: min(5vw, 48px);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #303030;
+    font-weight: 100;
+    position: relative;
+    margin-bottom: 1.5em;
 }
 
-.works p{
-	font-size: 2vw;
-	font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-	color: #303030;
-	font-weight :200;
-	top: calc(5vw + 3em);
-  	left: 0;
-	position:absolute;
-	text-align: left;
+.works p {
+    font-size: min(2vw, 20px);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #303030;
+    font-weight: 200;
+    position: relative;
+    text-align: left;
+    margin: 1em 0;
 }
 
 .works a {
@@ -263,20 +287,21 @@ html {
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2vw;
+    padding: 0 max(2vw, 20px);
 }
 
 .footer-section {
-    flex: 1;
-    margin: 0 2vw;
+    flex: 1 1 300px;
+    margin: 0 2vw 2vw 2vw;
 }
 
 .footer-section h3 {
     color: #303030;
-    font-size: 1.8vw;
+    font-size: min(1.8vw, 24px);
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
     font-weight: 200;
     margin-bottom: 1.5vw;
@@ -284,7 +309,7 @@ html {
 
 .footer-section p {
     color: #505050;
-    font-size: 1.2vw;
+    font-size: min(1.2vw, 16px);
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
     font-weight: 200;
     line-height: 1.6;
@@ -302,7 +327,7 @@ html {
 .footer-section ul li a {
     color: #505050;
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: min(1.2vw, 16px);
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
     font-weight: 200;
     transition: 0.3s;
@@ -321,7 +346,80 @@ html {
 
 .footer-bottom p {
     color: #707070;
-    font-size: 1vw;
+    font-size: min(1vw, 14px);
     font-family: 'Hiragino Sans','游ゴシック Light',sans-serif;
     font-weight: 200;
+}
+
+/* レスポンシブ対応のためのメディアクエリ */
+@media screen and (max-width: 768px) {
+    .menu {
+        padding: 10px 0;
+    }
+    
+    .menu li a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin: 20px 0;
+        width: 90%;
+    }
+    
+    .footer-section h3 {
+        font-size: 20px;
+    }
+    
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 16px;
+    }
+    
+    .main {
+        width: 85%;  /* モバイル表示時は少し広めに */
+    }
+    
+    .main p {
+        font-size: 18px;
+        padding: 0;  /* パディングを削除 */
+    }
+    
+    .works {
+        width: 85vw;
+        padding: 20px;
+    }
+    
+    .works h1 {
+        font-size: 32px;
+    }
+    
+    .works p {
+        font-size: 16px;
+    }
+}
+
+/* 小さい画面用の追加調整 */
+@media screen and (max-width: 480px) {
+    .CompanyName {
+        font-size: 48px;
+    }
+    
+    .welcome {
+        font-size: 32px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .main p {
+        font-size: 16px;
+    }
 }
