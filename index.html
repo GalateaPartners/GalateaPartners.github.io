@@ -1,97 +1,130 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./style/main.css">
-    <title>Galatea Partners</title>
-    <link rel="shortcut icon" href="img/icon/icon.jpg" type="image/jpg">
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
-    <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://galateapartners.github.io "/>
-    <meta property="og:title" content="Galatea Partners" />
-    <meta property="og:description" content="Galatea Partners" />
-    <meta property="og:image" content="img/icon/icon.jpg" />
-
-    <script>
-    // smoothscroll
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 500,
-        speedAsDuration: true
-    });
-    </script>
+  <meta charset="UTF-8" />
+  <title>Galatea Partners - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./img/icon/icon.jpg" type="image/jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-
 <body>
-	<canvas id="canvas"></canvas>
-	<section id="body">
 
-    <!-- menu bar-->
-    <ul class="menu" data-scroll-header>
-         <li>
-            <a href="#">
-                HOME
-            </a>
-        </li>
-        <li> 
-            <a data-scroll href="#about">
-                ABOUT
-            </a>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-contents">
+      <a class="logo" href="index.html">Galatea Partners</a>
+      <button class="hamburger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links">     
+        <a href="about.html">About us</a>
+        <a href="recruit.html">Recruit</a>
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- スライダーセクション -->
+    <div class="slider-container">
+      <button class="slide-btn slide-btn--prev" aria-label="Previous slide">&#10094;</button>
+      <div class="slider-wrap">
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_1.jpg" alt="Slide 1">
+          <div class="caption">
+            <h2>新製品の発表</h2>
+            <a href="#news">詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_2.jpg" alt="Slide 2">
+          <div class="caption">
+            <h2>期間限定セール</h2>
+            <a href="#news">今すぐチェック</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_3.jpg" alt="Slide 3">
+          <div class="caption">
+            <h2>イベント告知</h2>
+            <a href="#news">続きを読む</a>
+          </div>
+        </div>
+      </div>
+      <button class="slide-btn slide-btn--next" aria-label="Next slide">&#10095;</button>
+    </div>
+
+    <!-- News（ニュース）セクション -->
+    <section id="news" class="news-section">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <a href="#">
+            <time datetime="2025-02-17">2025/02/17</time> 新サービス開始のお知らせ
+          </a>
         </li>
         <li>
-            <a href="#works">
-                WORKS
-            </a>
+          <a href="#">
+            <time datetime="2025-01-30">2025/01/30</time> プレスリリース：○○との業務提携
+          </a>
         </li>
         <li>
-            <a href="#contact">
-                CONTACT
-            </a>
+          <a href="#">
+            <time datetime="2025-01-20">2025/01/20</time> イベント開催のお知らせ
+          </a>
         </li>
-    </ul>
-
-    <!--main cntents-->
-
-    <!-- top-->
-    <center>
-    <div class="CompanyName">
-        Galatea Partners
-    </div>
-			<div class="welcome">
-        Welcome to our website.
-    </div>
-     <!-- about-->
-    <p id="about">
-        <h1 class="title">
-            ABOUT
-        </h1>
-        <div class="main">
-            <p>Galatea Partnersは、パートナーロボットの開発で人々を幸せにする会社です</p>
-        </div>
-    </p>
-
-     <!-- works-->
-    <p id="works">
-        <h1 class="title">
-            WORKS
-        </h1>
-        <div class="main">
-            <p>準備中……</p>
-        </div>
-    </p>
-
-     <!-- contact-->
-    <p id="contact">
-        <h1 class="title">
-           CONTACT
-        </h1>
-        <div class="main">
-            <p>Twitter account:
-            <a href="https://twitter.com/" target="_blank"><img src="img/icon/twitter.svg" class="logo"></a></p>
-            <p>mail address: example@example.com</p>
-        </div>
-    </p>
-    </center>
-
+      </ul>
+      <p class="news-more">
+        <a href="news.html" >さらに見る</a>
+      </p>
     </section>
+
+    <!-- About us へ誘導 -->
+    <section class="intro-section">
+      <h2>About us</h2>
+      <p>
+        私たちは、○○を主要事業とする株式会社です。<br />
+        ここでは企業理念や事業内容を簡単に説明します。<br />
+        さらに詳しく知りたい方は、下記のボタンから詳細ページへどうぞ。
+      </p>
+      <p>
+        <a href="about.html" class="btn">続きを読む</a>
+      </p>
+    </section>
+
+    <!-- Service へのリンク -->
+    <section class="service-section">
+      <h2>Services</h2>
+      <p>
+        弊社のサービス一覧はこちらからご覧いただけます。
+      </p>
+      <p>
+        <a href="services.html" class="btn">サービス詳細へ</a> <!-- 実際には別ページorサービス用ページ -->
+      </p>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="sitemap">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="recruit.html">Recruit</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+    <small>&copy; 2025 Galatea Partners, Inc.</small>
+  </footer>
+
+  <!-- スクリプト -->
+  <script src="script.js"></script>
 </body>
 </html>
