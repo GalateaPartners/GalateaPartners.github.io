@@ -255,6 +255,7 @@ section h2::after {
   color: #222;
   background-color: #FAFAFA;
   transition: all 0.2s;
+  border-radius: 3px;
 }
 
 .btn:hover {
@@ -354,12 +355,40 @@ section h2::after {
 }
 
 .job-item {
+  width: 80%;
+  margin: 0 auto; 
   border: 1px solid #222;
   padding: 1rem;
+  border-radius: 5px;
+}
+
+.job-item ul {
+  padding: 0% 10%;
+  list-style: none;
+}
+
+
+.job-item p {
+  padding: 0% 10%;
+  list-style: none;
+}
+
+.job-item li {
+  list-style: none;
 }
 
 .job-item h2 {
   margin-bottom: 0.5rem;
+}
+
+.job-item h2::after {
+  content: "";
+  display: block;
+  width: 80%;          /* 線の長さ。好みで調整 */
+  height: 1px;          /* 線の太さ */
+  background-color: #222;
+  margin: 0.25rem auto 1em; 
+  /* 上: 0.5rem離す、左右: auto => 中央寄せ、下: 0 */
 }
 
 /* レスポンシブ対応 */
