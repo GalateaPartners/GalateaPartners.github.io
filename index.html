@@ -25,35 +25,35 @@
   <!-- メインコンテンツ -->
   <main>
     <!-- スライダーセクション -->
-    <section class="slider">
-      <div class="slide active">
-        <img src="https://via.placeholder.com/1200x400?text=Slide1" alt="Slide 1">
-        <div class="caption">
-          <h2>新製品の発表</h2>
-          <a href="#news">詳しくはこちら</a>
+    <div class="slider-container">
+      <button class="slide-btn slide-btn--prev" aria-label="Previous slide">&#10094;</button>
+      <div class="slider-wrap">
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_1.jpg" alt="Slide 1">
+          <div class="caption">
+            <h2>新製品の発表</h2>
+            <a href="#news">詳しくはこちら</a>
+          </div>
         </div>
-      </div>
-      <div class="slide">
-        <img src="https://via.placeholder.com/1200x400?text=Slide2" alt="Slide 2">
-        <div class="caption">
-          <h2>期間限定セール</h2>
-          <a href="#news">今すぐチェック</a>
+
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_2.jpg" alt="Slide 2">
+          <div class="caption">
+            <h2>期間限定セール</h2>
+            <a href="#news">今すぐチェック</a>
+          </div>
         </div>
+
+        <div class="slide">
+          <img src="./img/TopSlides/Slide_3.jpg" alt="Slide 3">
+          <div class="caption">
+            <h2>イベント告知</h2>
+            <a href="#news">続きを読む</a>
+          </div>
+        </div> s
       </div>
-      <div class="slide">
-        <img src="https://via.placeholder.com/1200x400?text=Slide3" alt="Slide 3">
-        <div class="caption">
-          <h2>イベント告知</h2>
-          <a href="#news">続きを読む</a>
-        </div>
-      </div>
-      <!-- ナビゲーションボタン（任意） -->
-      <div class="slider-nav">
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </section>
+      <button class="slide-btn slide-btn--next" aria-label="Next slide">&#10095;</button>
+    </div>
 
     <!-- News（ニュース）セクション -->
     <section id="news" class="news-section">
