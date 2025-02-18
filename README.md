@@ -1,2 +1,2 @@
 # GalateaPartners.github.io
-**[Galatea Partners](https://GalateaPartners.github.io)**のウェブサイトです。
+**[Galatea Partners](https://GalateaPartners.github.io)** のウェブサイトです。
