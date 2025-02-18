@@ -8,8 +8,8 @@
 
 /* 白と黒を基調としたモダンデザイン */
 body {
-  background-color: #fff;
-  color: #000;
+  background-color: #FAFAFA;
+  color: #222;
   line-height: 1.6;
 }
 
@@ -18,8 +18,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #000;
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #222;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +44,7 @@ body {
 .hamburger span {
   width: 25px;
   height: 2px;
-  background: #000;
+  background: #222;
   display: block;
 }
 
@@ -56,7 +56,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #000;
+  color: #222;
   font-weight: bold;
 }
 
@@ -72,7 +72,7 @@ main {
 
 .slider-container {
   width: 100%;
-
+  max-width: 1200px;
   overflow: hidden;    /* 横にあふれた分を隠す */
   margin: 0 auto;      /* 中央寄せ */
   position: relative;
@@ -105,7 +105,7 @@ main {
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: #FAFAFA;
   border: none;
   font-size: 2rem;
   padding: 0.5rem 1rem;
@@ -131,7 +131,7 @@ main {
   left: 30px;
   background-color: rgba(255,255,255,0.8);
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid #222;
 }
 
 .caption h2 {
@@ -139,7 +139,7 @@ main {
 }
 
 .caption a {
-  color: #000;
+  color: #222;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -156,16 +156,37 @@ main {
 .slider-nav .dot {
   width: 10px;
   height: 10px;
-  border: 1px solid #000;
+  border: 1px solid #222;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #FAFAFA;
 }
 
 .slider-nav .active-dot {
-  background-color: #000;
+  background-color: #222;
 }
 
+section {
+  max-width: 1000px; /* デザインに合わせて調整 */
+  margin: 0 auto;    /* 中央寄せ */
+  padding: 0 1rem;   /* 画面幅が狭い時の左右余白 */
+}
+
+section h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 1000px;          /* 線の長さ。好みで調整 */
+  height: 1px;          /* 線の太さ */
+  background-color: #222;
+  margin: 0.25rem auto 1em; 
+  /* 上: 0.5rem離す、左右: auto => 中央寄せ、下: 0 */
+}
 /* Newsセクション */
 .news-section {
   margin-bottom: 2rem;
@@ -187,7 +208,7 @@ main {
 
 .news-list a {
   text-decoration: none;
-  color: #000;
+  color: #222;
   transition: color 0.2s;
 }
 
@@ -218,21 +239,21 @@ main {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border: 2px solid #000;
+  border: 2px solid #222;
   text-decoration: none;
-  color: #000;
-  background-color: #fff;
+  color: #222;
+  background-color: #FAFAFA;
   transition: all 0.2s;
 }
 
 .btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #222;
+  color: #FAFAFA;
 }
 
 /* フッター */
 .footer {
-  border-top: 1px solid #000;
+  border-top: 1px solid #222;
   padding: 1rem;
   text-align: center;
   margin-top: 2rem;
@@ -254,7 +275,7 @@ main {
 
 .sitemap a {
   text-decoration: none;
-  color: #000;
+  color: #222;
 }
 
 /* Aboutページ用のセクション */
@@ -286,7 +307,7 @@ main {
 }
 
 .job-item {
-  border: 1px solid #000;
+  border: 1px solid #222;
   padding: 1rem;
 }
 
@@ -302,11 +323,11 @@ main {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #FAFAFA;
     position: absolute;
     top: 60px;
     right: 10px;
-    border: 1px solid #000;
+    border: 1px solid #222;
     padding: 1rem;
   }
   .nav-links a {

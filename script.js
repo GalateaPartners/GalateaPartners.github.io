@@ -49,14 +49,14 @@ function prevSlide() {
 }
 
 // 3秒ごとにスライドを切り替え
-slideInterval = setInterval(nextSlide, 3000);
+slideInterval = setInterval(nextSlide, 3222);
 
 function startAutoSlide() {
   // もし既にIntervalがセットされていたらクリアしてから新しくセット
   if (slideInterval) {
     clearInterval(slideInterval);
   }
-  slideInterval = setInterval(nextSlide, 3000);
+  slideInterval = setInterval(nextSlide, 3222);
 }
 
 nextButton.addEventListener('click', () => {
