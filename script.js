@@ -13,7 +13,7 @@ const sliderWrap = document.querySelector('.slider-wrap');
 const prevButton = document.querySelector('.slide-btn--prev');
 const nextButton = document.querySelector('.slide-btn--next');
 
-let currentSlide = 1;
+let currentSlide = 0;
 let slideInterval = null;
 
 function showSlide(index) {
