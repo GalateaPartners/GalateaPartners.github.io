@@ -87,6 +87,8 @@ main {
   overflow: hidden;    /* 横にあふれた分を隠す */
   margin: 0 auto;      /* 中央寄せ */
   position: relative;
+  opacity: 0;
+  animation: fadeInFromAbove 1s ease-in-out forwards; /* ページ読み込み後に発火 */
 }
 
 .slider-wrap {
@@ -187,20 +189,64 @@ section {
   padding: 0 1rem;   /* 画面幅が狭い時の左右余白 */
 }
 
-section h2 {
+section .section-contents {
+  opacity: 0;               /* 最初は非表示（透明） */
+  animation: fadeIn 1s ease-out forwards 1.4s;
+}
+
+section .section-title {
   position: relative;
   text-align: center;
   margin-bottom: 1.5rem;
+  opacity: 0;               /* 最初は非表示（透明） */
+  animation: fadeIn 1s ease-in-out forwards 0.5s;
 }
 
-section h2::after {
+section .section-title::after {
   content: "";
   display: block;
   width: 100%;          /* 線の長さ。好みで調整 */
   height: 1px;          /* 線の太さ */
   background-color: #222;
   margin: 0.25rem auto 1em; 
-  /* 上: 0.5rem離す、左右: auto => 中央寄せ、下: 0 */
+  /* 上: 025rem離す、左右: auto => 中央寄せ、下: 0 */
+  transform-origin: center; /* スケールの原点を中央に */
+  opacity: 0;
+  animation: expandLine 0.7s ease-in-out forwards 0.7s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);  /* 少し下から */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromAbove {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);  /* 少し下から */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 下線が中心から一気に広がる */
+@keyframes expandLine {
+  0% {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 /* Newsセクション */
 .news-section {
@@ -299,6 +345,7 @@ section h2::after {
 .page-title {
   text-align: center;
   margin-bottom: 4rem;
+  animation: fadeInFromAbove 0.8s ease-in-out forwards;
 }
 
 .title-en {
@@ -383,6 +430,7 @@ section h2::after {
 
 .job-item h2 {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .job-item h2::after {
